@@ -1,7 +1,8 @@
-# EMI-An-Efficient-Algorithm-for-Identifying-Maximal-Rigid-Clusters-in-3D-Generic-Graphs
-Including IMP, BMI, Trimmed-Base, Trim-FIX, automatic data generator, drawing program, and main Program
+### EMI-An-Efficient-Algorithm-for-Identifying-Maximal-Rigid-Clusters-in-3D-Generic-Graphs
 
-Also Including a set of sample input files: Exp1-P and Exp1-VE. 
+## Including IMP, BMI, Trimmed-Base, Trim-FIX, automatic data generator, drawing program, and main Program
+
+## Also Including a set of sample input files: Exp1-P and Exp1-VE. 
 
 IdentifyMutuallyPairs is IMP.
 
