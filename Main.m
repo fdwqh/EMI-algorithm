@@ -31,56 +31,10 @@ RigidSet=GetRigidSet(N,RigidClusters);
 RigidSet=OptimizeREP(N,RigidClusters,RigidSet,MP1,cutoff);
 toc;
 disp(R);
-% ClustersNumber=zeros(1,5);
-% Base=N/5;
-% for i=1:R
-%     num=length(RigidSet{i});
-%     if mod(num,Base)==0
-%         ClustersNumber(num/Base)=ClustersNumber(num/Base)+1;
-%     else
-%         ClustersNumber(fix(num/Base)+1)=ClustersNumber(fix(num/Base)+1)+1;
-%     end
-% end
-% disp(ClustersNumber);
 
-% for i=1:R
-%     disp(RigidSet{i});
-% end
-
-% fileID=fopen('exp1.txt','w');
-% for i=1:R
-%     for j=1:length(RigidSet{i})
-%         fprintf(fileID,"%d ",RigidSet{i}(j));
-%     end
-%     fprintf(fileID,"\n");
-% end
-% fclose(fileID);
-% 
-% AdjacentMatrix=zeros(N,N);
-% fileID=fopen('AdjacentMatrix1.txt','w');
-% for i=1:M
-%     AdjacentMatrix(Edges(i,1)+1,Edges(i,2)+1)=1;
-%     AdjacentMatrix(Edges(i,2)+1,Edges(i,1)+1)=1;
-% end
-% for i=1:N
-%     for j=1:N
-%         fprintf(fileID,"%d ",AdjacentMatrix(i,j));
-%     end
-%     fprintf(fileID,"\n");
-% end
-% fclose(fileID);
-% 
-% fileID=fopen('DistanceMatrix1.txt','w');
-% for i=1:N
-%     for j=1:N
-%         dis=norm((Points(i)-Points(j))/1000);
-%         fprintf(fileID,"%.2f ",dis);
-%     end
-%     fprintf(fileID,"\n");
-% end
-% fclose(fileID);
-% checkres=Check(N,-4,MutuallyPairs,RigidSet);
-% disp(checkres);
+for i=1:R
+    disp(RigidSet{i});
+end
 
 %% 做图
 ShowGraph(N,Edges,RigidClusters,RigidSet,Points);
