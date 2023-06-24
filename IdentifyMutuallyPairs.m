@@ -4,7 +4,6 @@ d=3;
 SumDelta=zeros(N,N);
 
 for T=1:3
-    %% 使用随机生成的节点位置
     Points=(rand(N,3)-0.5)*10000;
     RigidMatrix=zeros(M,d*N);
     for i=1:M
@@ -19,7 +18,6 @@ for T=1:3
     GSolution=null(RigidMatrix);
     toc;
     
-    %% 生成速度矢量
     Velocity=zeros(d*N,1);
     for i=1:size(GSolution,2)
         k=-1000+rand()*2000;
@@ -40,33 +38,12 @@ for T=1:3
 end
 SumDelta=log10(SumDelta);
 
-%% 给出cutoff
 cutoff=-1.5;
-% for i=1:N
-%     for j=1:N
-%         if SumDelta(i,j)~=-Inf
-%             cutoff=cutoff+SumDelta(i,j);
-%         end
-%     end
-% end
-% cutoff=cutoff/(N*N);
 for i=1:N
     for j=1:N
         if abs(SumDelta(i,j)-cutoff)<1.5
             disp([i j SumDelta(i,j)]);
         end
     end
-end
-end
-
-function Points=generate(N)
-L=-500;
-R=500;
-Points=zeros(N,3);
-for i=1:N
-    x=L+rand()*1000;
-    y=L+rand()*1000;
-    z=L+rand()*1000;
-    Points(i,:)=[x y z];
 end
 end
