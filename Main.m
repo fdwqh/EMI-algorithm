@@ -7,7 +7,6 @@ M=BaseData(1,2); %edge number
 Edges=BaseData(2:M+1,:);
 Points=load("Exp1-P.txt");
 Points=Points*1000;
-% [N,M,Edges,Points,Matrix]=generate_network_3d;
 
 %% mutually rigid vertex pairs
 [MP1,cutoff]=IdentifyMutuallyPairs(N,Edges,Points);
