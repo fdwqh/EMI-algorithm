@@ -1,8 +1,8 @@
 function [npoints,enum,edges,points,distMatrix]=generate_network_3d
 clc;
 %% initialization
-npoints=1000;
-degree=10;
+npoints=200;
+degree=2;
 
 %% Generate adjacency matrix
 enum=0;
